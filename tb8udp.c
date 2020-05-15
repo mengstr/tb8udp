@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     // to the whole-second value at command line if specified
     unsigned long lineDly = 100UL;
     if (argc == 2) lineDly = atol(argv[1]) * 1000UL;
-    struct timespec SLEEP_CHAR = {.tv_sec = 0, .tv_nsec = 2UL * 1000000UL};
+    struct timespec SLEEP_CHAR = {.tv_sec = 0, .tv_nsec = 10UL * 1000000UL};
     struct timespec SLEEP_LINE = {.tv_sec = lineDly / 1000UL, .tv_nsec = (lineDly * 1000000UL) % 1000000000UL};
     struct timespec SLEEP_END = {.tv_sec = 0, .tv_nsec = 250UL * 1000000UL};
 
